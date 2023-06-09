@@ -7,7 +7,6 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(NULL); cout.tie(NULL);
 
-	//입력
 	int m, x;
 	string op;
 	cin >> m;
@@ -19,8 +18,10 @@ int main() {
 	}
 
 	while (m--) {
+		//입력
 		cin >> op;
 
+		//연산
 		if (op == "add") {
 			cin >> x;
 			s.insert(x);
@@ -31,6 +32,8 @@ int main() {
 		}
 		else if (op == "check") {
 			cin >> x;
+
+			//출력
 			cout << s.count(x) << "\n";
 		}
 		else if (op == "toggle") {
