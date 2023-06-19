@@ -15,14 +15,12 @@ vector<char> getOperation(int n, queue<int>& q) {
 	while(!q.empty()) {
 		//큐의 front()가 s.top()보다 크거나 같은 경우 push 연산
 		if (s.empty() || q.front() >= s.top()) {
-			//cout << i << "push\n";
 			s.push(i++);
 			op.push_back('+');
 		}
 
 		//큐의 front() 숫자와 s의 top() 숫자가 같은 경우 pop 연산
 		while (!q.empty() && !s.empty() && q.front() == s.top()) {
-			//cout << s.top() << "pop\n";
 			s.pop();
 			q.pop();
 			op.push_back('-');
